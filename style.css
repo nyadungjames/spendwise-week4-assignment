@@ -1,0 +1,22 @@
+:root {
+  --brand-color: #4F46E5;
+  --accent-color: #10B981;
+  --surface-color: #F8FAFC;
+  --card-surface: #FFFFFF;
+  --primary-text: #0F172A;
+  --secondary-text: #64748B;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-areas: "sidebar header" "sidebar main";
+}
+.card:hover, .card:focus {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+@media (max-width: 768px){
+  .dashboard{ grid-template-columns: 1fr; }
+  .cards-grid{ grid-template-columns: 1fr; }
+}
